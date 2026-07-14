@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white/70 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 py-12 lg:py-16">
-          <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 py-12 lg:py-16">
+          <div>
+            <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -14,40 +14,26 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="font-heading font-bold text-lg text-white">İş Makinesi Kiralama</span>
-            </div>
+            </Link>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
-              Profesyonel iş makinesi kiralama hizmeti. Kepçe, kamyon, beko loder ve daha fazlası.
+              Profesyonel iş makinesi kiralama hizmeti. Kepçe ve kamyon ile güvenilir çözümler.
             </p>
           </div>
 
           <div>
-            <h4 className="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-4">Makineler</h4>
+            <Link href="/makineler" className="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-4 hover:text-accent transition-colors inline-block">Makineler</Link>
             <ul className="space-y-3">
               <li><Link href="/makineler/kepce" className="text-sm text-white/50 hover:text-white transition-colors">Kepçe</Link></li>
               <li><Link href="/makineler/kamyon" className="text-sm text-white/50 hover:text-white transition-colors">Kamyon</Link></li>
-              <li><Link href="/makineler" className="text-sm text-white/50 hover:text-white transition-colors">Tüm Makineler</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-4">Kurumsal</h4>
-            <ul className="space-y-3">
-              <li><Link href="/hakkimizda" className="text-sm text-white/50 hover:text-white transition-colors">Hakkımızda</Link></li>
-              <li><Link href="/iletisim" className="text-sm text-white/50 hover:text-white transition-colors">İletişim</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-4">İletişim</h4>
+            <Link href="/iletisim" className="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-4 hover:text-accent transition-colors inline-block">İletişim</Link>
             <ul className="space-y-3">
               <li>
                 <a href="tel:+905555555555" className="text-sm text-white/50 hover:text-white transition-colors">
                   +90 555 555 55 55
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@ismakinesikiralama.com" className="text-sm text-white/50 hover:text-white transition-colors">
-                  info@ismakinesikiralama.com
                 </a>
               </li>
               <li className="text-sm text-white/50">

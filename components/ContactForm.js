@@ -49,7 +49,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5 select-none">
       {status === "error" && (
         <div className="px-4 py-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700">
           Bir hata oluştu. Lütfen tekrar deneyin veya bizi doğrudan arayın.
@@ -64,7 +64,10 @@ export default function ContactForm() {
           id="name"
           name="name"
           required
-          className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm placeholder:text-muted-foreground"
+          pattern="[A-Za-zçğıöşüÇĞİÖŞÜ ]+"
+          title="Geçerli bir isim girin"
+          autoComplete="name"
+          className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm placeholder:text-muted-foreground select-text"
           placeholder="Adınız ve soyadınız"
         />
       </div>
@@ -77,8 +80,14 @@ export default function ContactForm() {
           id="phone"
           name="phone"
           required
-          className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm placeholder:text-muted-foreground"
-          placeholder="05XX XXX XX XX"
+          defaultValue=""
+          pattern="[0-9]{10}"
+          maxLength={10}
+          inputMode="numeric"
+          title="Geçerli bir telefon numarası girin"
+          autoComplete="tel"
+          className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm placeholder:text-muted-foreground select-text"
+          placeholder="(532) 123 45 67"
         />
       </div>
       <div>
@@ -90,7 +99,7 @@ export default function ContactForm() {
           name="message"
           rows={4}
           required
-          className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm placeholder:text-muted-foreground resize-none"
+          className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm placeholder:text-muted-foreground resize-none select-text"
           placeholder="İhtiyacınız olan makine ve çalışma detaylarını yazın..."
         />
       </div>

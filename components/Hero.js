@@ -6,8 +6,8 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900">
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1778072592769-220f94af4c13?fm=jpg&q=80&w=2000&auto=format&fit=crop"
-          alt="Excavator"
+          src="/images/hero.jpg"
+          alt="Kepçe ve kamyon ile inşaat çalışmaları"
           fill
           className="object-cover opacity-70 scale-110 animate-hero-zoom"
           priority
@@ -24,7 +24,7 @@ export default function Hero() {
             <span className="text-sm font-medium text-white/80">Profesyonel İş Makinesi Kiralama</span>
           </div>
 
-          <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tight mb-4">
+          <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.05] tracking-tight mb-4">
             İş Makinesi
             <span className="block text-accent">Kiralama</span>
           </h1>
@@ -34,7 +34,7 @@ export default function Hero() {
           </p>
 
           <p className="text-lg sm:text-xl text-white/60 max-w-xl mb-10 leading-relaxed">
-            Kepçe, kamyon, beko loder ve daha fazlası. Bakımlı ekipmanlar, uygun fiyatlar, profesyonel hizmet.
+            Kepçe ve kamyon kiralama hizmetinde güvenilir çözüm ortağınız. Uygun fiyat, profesyonel hizmet.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -58,18 +58,18 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="flex items-center gap-6 sm:gap-10 mt-12 pt-8 border-t border-white/10">
+          <div className="flex items-center justify-center gap-6 sm:gap-10 mt-12 pt-8 border-t border-white/10">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white font-heading">50+</div>
-              <div className="text-xs sm:text-sm text-white/50 mt-1">Makine</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white font-heading">Hızlı</div>
+              <div className="text-base text-white/80 mt-1">Teslimat</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white font-heading">200+</div>
-              <div className="text-xs sm:text-sm text-white/50 mt-1">Müşteri</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white font-heading">Güvenilir</div>
+              <div className="text-base text-white/80 mt-1">Hizmet</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white font-heading">10+</div>
-              <div className="text-xs sm:text-sm text-white/50 mt-1">Yıl Tecrübe</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white font-heading">Uygun</div>
+              <div className="text-base text-white/80 mt-1">Fiyat</div>
             </div>
           </div>
         </div>

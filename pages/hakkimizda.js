@@ -84,8 +84,8 @@ export default function Hakkimizda() {
               </div>
               <h2 className="font-heading text-xl font-bold text-card-foreground mb-3">Vizyonumuz</h2>
               <p className="text-muted-foreground leading-relaxed">
-                İş makinesi kiralama sektöründe güvenilirlik ve müşteri memnuniyeti odaklı
-                hizmet anlayışıyla lider konuma gelmek.
+                Müşterilerimizin her projede güvendiği, zamanında teslimat ve
+                kaliteli hizmetle fark yaratan bir kiralama firması olmak.
               </p>
             </div>
           </div>
@@ -111,18 +111,29 @@ export default function Hakkimizda() {
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-4">
               Hemen Teklif Alın
             </h2>
-            <p className="text-white/70 max-w-lg mx-auto mb-8">
-              Profesyonel ekibimiz size en uygun iş makinesini kiralamak için hazır.
+            <p className="text-white/70 text-lg mb-10 max-w-xl mx-auto">
+              İhtiyacınıza uygun iş makinesini kiralamak için bizi arayın veya iletişim formunu doldurun.
             </p>
-            <Link
-              href="/iletisim"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent/90 transition-all duration-200 shadow-lg shadow-accent/25"
-            >
-              İletişime Geç
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/iletisim"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent/90 transition-all duration-200 shadow-lg shadow-accent/25"
+              >
+                İletişime Geç
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <a
+                href="tel:+905555555555"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-200"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                +90 555 555 55 55
+              </a>
+            </div>
           </div>
         </div>
       </div>

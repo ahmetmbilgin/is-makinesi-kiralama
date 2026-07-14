@@ -5,19 +5,19 @@ const kamyonMachines = [
   {
     title: "Damperli Kamyon",
     description: "Hafriyat ve inşaat atığı taşımacılığı için 20 ton kapasiteli damperli kamyon.",
-    image: "https://images.unsplash.com/photo-1751054631354-a42bd7609d75?fm=jpg&q=80&w=800&auto=format&fit=crop",
+    image: "/images/kamyon-1.jpg",
     slug: "/iletisim",
   },
   {
     title: "Tır",
     description: "Ağır yük taşımacılığı için 40 ton kapasiteli tır.",
-    image: "https://images.unsplash.com/photo-1697847726197-bc8bd6cc6e4d?fm=jpg&q=80&w=800&auto=format&fit=crop",
+    image: "/images/kamyon-2.jpg",
     slug: "/iletisim",
   },
   {
     title: "Kamyonet",
     description: "Hafif yük taşımacılığı için 3.5 ton kapasiteli kamyonet.",
-    image: "https://images.unsplash.com/photo-1769160078514-70dcfed2a17e?fm=jpg&q=80&w=800&auto=format&fit=crop",
+    image: "/images/kamyon-3.jpg",
     slug: "/iletisim",
   },
 ]

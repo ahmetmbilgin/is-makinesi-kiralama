@@ -1,28 +1,19 @@
 import Head from "next/head"
 import Link from "next/link"
+import Image from "next/image"
 
 const categories = [
   {
     title: "Kepçe",
     description: "Kazı, hafriyat ve yükleme işleri için her boyutta kepçe.",
-    image: "https://images.unsplash.com/photo-1605910347035-59a2b94f2061?fm=jpg&q=80&w=800&auto=format&fit=crop",
+    image: "/images/kepce-makine.jpg",
     slug: "/makineler/kepce",
-    icon: (
-      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-      </svg>
-    )
   },
   {
     title: "Kamyon",
     description: "Damperli kamyonlarla hafriyat ve malzeme taşımacılığı.",
-    image: "https://images.unsplash.com/photo-1751054631354-a42bd7609d75?fm=jpg&q=80&w=800&auto=format&fit=crop",
+    image: "/images/kamyon-makine.jpg",
     slug: "/makineler/kamyon",
-    icon: (
-      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-      </svg>
-    )
   },
 ]
 
@@ -53,10 +44,14 @@ export default function Makineler() {
               href={cat.slug}
               className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-accent/5 hover:border-accent/30 hover:-translate-y-1"
             >
-              <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center overflow-hidden">
-                <div className="w-24 h-24 rounded-2xl bg-white/80 backdrop-blur-sm shadow-sm flex items-center justify-center text-primary transition-all duration-300 group-hover:bg-accent group-hover:text-white group-hover:shadow-lg group-hover:shadow-accent/25">
-                  {cat.icon}
-                </div>
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src={cat.image}
+                  alt={cat.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
               <div className="p-6 lg:p-8">
                 <h2 className="font-heading text-2xl font-bold text-card-foreground group-hover:text-accent transition-colors duration-200 mb-2">

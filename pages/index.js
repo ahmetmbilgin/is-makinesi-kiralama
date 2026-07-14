@@ -1,57 +1,49 @@
 import Head from "next/head"
 import Hero from "@/components/Hero"
-import MachineGrid from "@/components/MachineGrid"
 import Link from "next/link"
 
-const featuredMachines = [
-  {
-    title: "Kepçe",
-    description: "Hafriyat ve kazı çalışmalarınız için her boyutta kepçe kiralama hizmeti.",
-    image: "https://images.unsplash.com/photo-1605910347035-59a2b94f2061?fm=jpg&q=80&w=800&auto=format&fit=crop",
-    slug: "/makineler/kepce",
-  },
-  {
-    title: "Kamyon",
-    description: "Hafriyat ve inşaat malzemesi taşımacılığı için damperli kamyonlar.",
-    image: "https://images.unsplash.com/photo-1751054631354-a42bd7609d75?fm=jpg&q=80&w=800&auto=format&fit=crop",
-    slug: "/makineler/kamyon",
-  },
-
-]
-
 const stats = [
-  { value: "50+", label: "Makine" },
-  { value: "200+", label: "Mutlu Müşteri" },
-  { value: "10+", label: "Yıl Tecrübe" },
+  { value: "Hızlı", label: "Teslimat" },
+  { value: "Güvenilir", label: "Hizmet" },
+  { value: "Uygun", label: "Fiyat" },
 ]
 
 const features = [
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: "Zamanında Teslimat",
+    description: "Belirlenen zamanda, gecikme olmadan teslimat. Projeniz hiç aksamasın."
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
-    title: "Güvenilir Hizmet",
-    description: "Yılların deneyimi ile profesyonel çözümler. Referanslarıyla kanıtlanmış hizmet kalitesi."
+    title: "Güvenilir İş Ortağı",
+    description: "İhtiyacınıza göre özel çözümler, açık ve dürüst iletişim."
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
       </svg>
     ),
-    title: "Uygun Fiyat",
-    description: "Bütçenize uygun kiralama seçenekleri. En iyi fiyat garantisi ile hizmet veriyoruz."
+    title: "Teknik Destek",
+    description: "Her türlü sorun ve ihtiyacınızda hızlı yanıt."
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-1.596 1.596a1.125 1.125 0 01-1.591 0l-1.596-1.596a1.125 1.125 0 010-1.591l1.596-1.596a1.125 1.125 0 011.591 0l1.596 1.596a1.125 1.125 0 010 1.591zm3.166-3.166a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-1.592-4.588a1.125 1.125 0 010 1.591l-1.596 1.596a1.125 1.125 0 01-1.591 0L7.871 8.378a1.125 1.125 0 010-1.591l1.596-1.596a1.125 1.125 0 011.591 0l1.596 1.596a1.125 1.125 0 010 1.591z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
       </svg>
     ),
-    title: "Bakımlı Ekipman",
-    description: "Düzenli bakımı yapılmış, güvenli ve yüksek performanslı iş makineleri."
+    title: "Bakımlı Filo",
+    description: "Düzenli bakımı yapılmış, güvenli ve yüksek performanslı kepçe ve kamyonlar."
   }
 ]
 
@@ -62,36 +54,11 @@ export default function Home() {
         <title>İş Makinesi Kiralama | Kepçe, Kamyon Kiralama - Profesyonel Çözümler</title>
         <meta
           name="description"
-          content="İş makinesi kiralama hizmeti. Kepçe, kamyon, beko loder gibi iş makinelerini uygun fiyatlarla kiralayın. 10+ yıl tecrübe, 200+ mutlu müşteri. Hemen teklif alın."
+          content="İş makinesi kiralama hizmeti. Kepçe ve kamyon gibi iş makinelerini uygun fiyatlarla kiralayın. 10+ yıl tecrübe, 200+ mutlu müşteri. Hemen teklif alın."
         />
       </Head>
 
       <Hero />
-
-      <section className="py-16 sm:py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight mb-4">
-              Öne Çıkan Makineler
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              İhtiyacınıza uygun iş makinesini keşfedin
-            </p>
-          </div>
-          <MachineGrid machines={featuredMachines} />
-          <div className="text-center mt-10">
-            <Link
-              href="/makineler"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-xl hover:bg-accent/90 transition-all duration-200 shadow-sm shadow-accent/20"
-            >
-              Tüm Makineleri Gör
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <section className="py-16 sm:py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,7 +70,7 @@ export default function Home() {
               Sizi fark yaratan hizmet anlayışımızla tanıştıralım
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -160,7 +127,7 @@ export default function Home() {
             {stats.map((stat, index) => (
               <div key={index}>
                 <div className="font-heading text-3xl sm:text-4xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-white/50 mt-1">{stat.label}</div>
+                <div className="text-base text-white/80 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
