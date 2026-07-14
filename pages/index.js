@@ -16,12 +16,7 @@ const featuredMachines = [
     image: "https://images.unsplash.com/photo-1751054631354-a42bd7609d75?fm=jpg&q=80&w=800&auto=format&fit=crop",
     slug: "/makineler/kamyon",
   },
-  {
-    title: "Beko Loder",
-    description: "Kazı ve yükleme işlemleri için beko loder kiralama seçenekleri.",
-    image: "https://images.unsplash.com/photo-1759579479871-19dfbc9c39ba?fm=jpg&q=80&w=800&auto=format&fit=crop",
-    slug: "/makineler/kepce",
-  },
+
 ]
 
 const stats = [

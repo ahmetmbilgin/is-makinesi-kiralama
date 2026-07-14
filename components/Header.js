@@ -1,11 +1,24 @@
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { useState } from "react"
+
+const navLinks = [
+  { href: "/", label: "Ana Sayfa" },
+  { href: "/makineler", label: "Makineler" },
+  { href: "/hakkimizda", label: "Hakkımızda" },
+]
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const router = useRouter()
+
+  function isActive(href) {
+    if (href === "/") return router.pathname === "/"
+    return router.pathname.startsWith(href)
+  }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/60">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
@@ -21,16 +34,27 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
-            <Link href="/" className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-accent rounded-lg hover:bg-muted transition-all duration-200">
-              Ana Sayfa
-            </Link>
-            <Link href="/makineler" className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-accent rounded-lg hover:bg-muted transition-all duration-200">
-              Makineler
-            </Link>
-            <Link href="/hakkimizda" className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-accent rounded-lg hover:bg-muted transition-all duration-200">
-              Hakkımızda
-            </Link>
-            <Link href="/iletisim" className="ml-2 px-5 py-2 text-sm font-semibold text-white bg-accent rounded-lg hover:bg-accent/90 transition-all duration-200 shadow-sm shadow-accent/25">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  isActive(link.href)
+                    ? "text-accent bg-accent/10"
+                    : "text-foreground/80 hover:text-accent hover:bg-muted"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/iletisim"
+              className={`ml-2 px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
+                isActive("/iletisim")
+                  ? "text-white bg-accent/80 shadow-sm shadow-accent/25"
+                  : "text-white bg-accent hover:bg-accent/90 shadow-sm shadow-accent/25"
+              }`}
+            >
               İletişim
             </Link>
           </nav>
@@ -50,16 +74,29 @@ export default function Header() {
 
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-80 pb-4' : 'max-h-0'}`}>
           <div className="flex flex-col gap-1 pt-2 border-t border-border">
-            <Link href="/" className="px-4 py-3 text-sm font-medium rounded-lg hover:bg-muted transition-colors" onClick={() => setMenuOpen(false)}>
-              Ana Sayfa
-            </Link>
-            <Link href="/makineler" className="px-4 py-3 text-sm font-medium rounded-lg hover:bg-muted transition-colors" onClick={() => setMenuOpen(false)}>
-              Makineler
-            </Link>
-            <Link href="/hakkimizda" className="px-4 py-3 text-sm font-medium rounded-lg hover:bg-muted transition-colors" onClick={() => setMenuOpen(false)}>
-              Hakkımızda
-            </Link>
-            <Link href="/iletisim" className="mt-2 px-4 py-3 text-sm font-semibold text-white bg-accent rounded-lg text-center" onClick={() => setMenuOpen(false)}>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                  isActive(link.href)
+                    ? "text-accent bg-accent/10"
+                    : "hover:bg-muted"
+                }`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/iletisim"
+              className={`mt-2 px-4 py-3 text-sm font-semibold rounded-lg text-center transition-colors ${
+                isActive("/iletisim")
+                  ? "text-white bg-accent/80"
+                  : "text-white bg-accent"
+              }`}
+              onClick={() => setMenuOpen(false)}
+            >
               İletişim
             </Link>
           </div>
