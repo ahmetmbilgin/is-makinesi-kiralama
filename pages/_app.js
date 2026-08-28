@@ -14,7 +14,10 @@ export default function App({ Component, pageProps }) {
               "@type": "RentalService",
               name: "İş Makinesi Kiralama",
               telephone: "+90 535 355 31 87",
-              areaServed: "TR",
+              areaServed: {
+                "@type": "City",
+                name: "İstanbul (Anadolu Yakası)",
+              },
               availableLanguage: "Turkish",
               serviceType: "Beko Loder, Ekskavatör ve Mini Ekskavatör Kiralama",
               openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-15:00"],
