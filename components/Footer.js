@@ -32,7 +32,7 @@ export default function Footer() {
                 İstanbul Anadolu Yakası
               </li>
               <li className="text-sm text-white/50">
-                Hafta içi: 08:00 - 18:00
+                Hafta içi 08:00 - 18:00 · Cmt 09:00 - 15:00
               </li>
             </ul>
           </div>
