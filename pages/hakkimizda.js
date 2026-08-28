@@ -9,7 +9,7 @@ const values = [
       </svg>
     ),
     title: "Güvenilirlik",
-    description: "Yılların deneyimi ve referanslarıyla kanıtlanmış hizmet kalitesi."
+    description: "Şeffaf fiyatlandırma ve söz verdiğimiz tarihte teslimat ile güven inşa ediyoruz."
   },
   {
     icon: (
@@ -36,7 +36,7 @@ const values = [
       </svg>
     ),
     title: "Müşteri Odaklı",
-    description: "7/24 ulaşılabilir müşteri desteği ile her zaman yanınızdayız."
+    description: "Hafta içi 08:00 - 18:00, cumartesi 09:00 - 15:00 arasında ulaşılabiliriz."
   }
 ]
 
@@ -47,12 +47,12 @@ export default function Hakkimizda() {
         <title>Hakkımızda | İş Makinesi Kiralama</title>
         <meta
           name="description"
-          content="İş makinesi kiralama sektöründe yılların deneyimi. Güvenilir, uygun fiyatlı ve profesyonel hizmet."
+          content="İstanbul Anadolu Yakası'nda beko loder, ekskavatör ve mini ekskavatör kiralama. Güvenilir, uygun fiyatlı ve profesyonel hizmet."
         />
         <meta property="og:title" content="Hakkımızda | İş Makinesi Kiralama" />
         <meta
           property="og:description"
-          content="İş makinesi kiralama sektöründe yılların deneyimi. Güvenilir, uygun fiyatlı ve profesyonel hizmet."
+          content="İstanbul Anadolu Yakası'nda beko loder, ekskavatör ve mini ekskavatör kiralama. Güvenilir, uygun fiyatlı ve profesyonel hizmet."
         />
       </Head>
 
