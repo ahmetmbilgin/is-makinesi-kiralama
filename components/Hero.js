@@ -20,16 +20,16 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <div className="max-w-3xl">
           <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.05] tracking-tight mb-4">
-            İş Makinesi
-            <span className="block text-accent">Kiralama</span>
+            İhtiyacınız Olan
+            <span className="block text-accent">İş Makinesini Bulalım</span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-white/80 font-heading font-semibold mb-6">
-            Profesyonel Çözümler
+            Kiralama & Nakliye
           </p>
 
           <p className="text-lg sm:text-xl text-white/60 max-w-xl mb-10 leading-relaxed">
-            Kepçe kiralama hizmetinde güvenilir çözüm ortağınız. Uygun fiyat, profesyonel hizmet.
+            İstanbul Anadolu Yakası&apos;nda iş makinesi kiralama ihtiyaçlarınız için uygun makineyi buluyor, kiralama ve nakliye sürecini organize ediyoruz.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

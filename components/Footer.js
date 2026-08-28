@@ -29,6 +29,9 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-sm text-white/50">
+                İstanbul Anadolu Yakası
+              </li>
+              <li className="text-sm text-white/50">
                 Hafta içi: 08:00 - 18:00
               </li>
             </ul>
