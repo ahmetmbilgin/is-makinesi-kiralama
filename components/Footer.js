@@ -16,24 +16,16 @@ export default function Footer() {
               <span className="font-heading font-bold text-lg text-white">İş Makinesi Kiralama</span>
             </Link>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
-              Profesyonel iş makinesi kiralama hizmeti. Kepçe ve kamyon ile güvenilir çözümler.
+              Profesyonel iş makinesi kiralama hizmeti. Güvenilir ve uygun fiyatlı çözümler.
             </p>
-          </div>
-
-          <div>
-            <Link href="/makineler" className="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-4 hover:text-accent transition-colors inline-block">Makineler</Link>
-            <ul className="space-y-3">
-              <li><Link href="/makineler/kepce" className="text-sm text-white/50 hover:text-white transition-colors">Kepçe</Link></li>
-              <li><Link href="/makineler/kamyon" className="text-sm text-white/50 hover:text-white transition-colors">Kamyon</Link></li>
-            </ul>
           </div>
 
           <div>
             <Link href="/iletisim" className="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-4 hover:text-accent transition-colors inline-block">İletişim</Link>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+905555555555" className="text-sm text-white/50 hover:text-white transition-colors">
-                  +90 555 555 55 55
+                <a href="tel:+905353553187" className="text-sm text-white/50 hover:text-white transition-colors">
+                  +90 535 355 31 87
                 </a>
               </li>
               <li className="text-sm text-white/50">

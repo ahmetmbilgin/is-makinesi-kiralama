@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function MachineCard({ title, description, image, slug }) {
   return (
-    <Link href={slug} className="group block">
+    <Link href={{ pathname: "/iletisim", query: { makine: title } }} className="group block">
       <div className="relative bg-card rounded-2xl border border-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-accent/5 hover:border-accent/30 hover:-translate-y-1">
         <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
           <Image

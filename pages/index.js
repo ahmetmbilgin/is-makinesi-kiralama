@@ -2,12 +2,6 @@ import Head from "next/head"
 import Hero from "@/components/Hero"
 import Link from "next/link"
 
-const stats = [
-  { value: "Hızlı", label: "Teslimat" },
-  { value: "Güvenilir", label: "Hizmet" },
-  { value: "Uygun", label: "Fiyat" },
-]
-
 const features = [
   {
     icon: (
@@ -43,7 +37,7 @@ const features = [
       </svg>
     ),
     title: "Bakımlı Filo",
-    description: "Düzenli bakımı yapılmış, güvenli ve yüksek performanslı kepçe ve kamyonlar."
+    description: "Düzenli bakımı yapılmış, güvenli ve yüksek performanslı iş makineleri."
   }
 ]
 
@@ -51,10 +45,48 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>İş Makinesi Kiralama | Kepçe, Kamyon Kiralama - Profesyonel Çözümler</title>
+        <title>İş Makinesi Kiralama | Kepçe Kiralama - Profesyonel Çözümler</title>
         <meta
           name="description"
-          content="İş makinesi kiralama hizmeti. Kepçe ve kamyon gibi iş makinelerini uygun fiyatlarla kiralayın. 10+ yıl tecrübe, 200+ mutlu müşteri. Hemen teklif alın."
+          content="İş makinesi kiralama hizmeti. Kepçe gibi iş makinelerini uygun fiyatlarla kiralayın. Hemen teklif alın."
+        />
+        <meta property="og:title" content="İş Makinesi Kiralama | Kepçe Kiralama - Profesyonel Çözümler" />
+        <meta
+          property="og:description"
+          content="İş makinesi kiralama hizmeti. Beko loder, ekskavatör ve mini ekskavatörü uygun fiyatlarla kiralayın. Hemen teklif alın."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "RentalService",
+              name: "İş Makinesi Kiralama",
+              telephone: "+90 535 355 31 87",
+              areaServed: "TR",
+              availableLanguage: "Turkish",
+              description:
+                "Beko loder, ekskavatör ve mini ekskavatör kiralama hizmeti. Uygun fiyat, güvenilir ve profesyonel çözümler.",
+              brand: {
+                "@type": "Brand",
+                name: "İş Makinesi Kiralama",
+              },
+              makesOffer: [
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Beko Loder Kiralama" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Ekskavatör Kiralama" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Mini Ekskavatör Kiralama" },
+                },
+              ],
+            }),
+          }}
         />
       </Head>
 
@@ -114,22 +146,14 @@ export default function Home() {
               </svg>
             </Link>
             <a
-              href="tel:+905555555555"
+              href="tel:+905353553187"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-200"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>
-              +90 555 555 55 55
+              +90 535 355 31 87
             </a>
-          </div>
-          <div className="mt-10 grid grid-cols-3 gap-8 max-w-lg mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index}>
-                <div className="font-heading text-3xl sm:text-4xl font-bold text-white">{stat.value}</div>
-                <div className="text-base text-white/80 mt-1">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

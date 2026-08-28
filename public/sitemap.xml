@@ -11,12 +11,17 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ismakinesikiralama.com/makineler/kepce</loc>
+    <loc>https://ismakinesikiralama.com/makineler/beko-loder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ismakinesikiralama.com/makineler/kamyon</loc>
+    <loc>https://ismakinesikiralama.com/makineler/ekskavator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ismakinesikiralama.com/makineler/mini-ekskavator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

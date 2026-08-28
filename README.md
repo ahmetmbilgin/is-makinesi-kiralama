@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏗️ İş Makinesi Kiralama Platformu
 
-## Getting Started
+İnşaat ve hafriyat sektörü için **beko loder, ekskavatör ve mini ekskavatör** kiralama hizmeti sunan modern, hızlı ve SEO-odaklı bir web sitesi.
 
-First, run the development server:
+![Ana Sayfa Önizleme](docs/is-makinesi-kiralama.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Teknolojiler
+
+- **Next.js 16** (Pages Router) — React framework
+- **Tailwind CSS v4** — utility-first stiller
+- **Formspree** — form gönderimleri (ücretsiz, sunucusuz)
+
+## ✨ Özellikler
+
+- Responsive / mobil uyumlu tasarım
+- Makine kategorileri: Beko Loder, Ekskavatör, Mini Ekskavatör
+- Makine seçimi → iletişim formuna otomatik makine bilgisi taşıma
+- Formspree ile çalışan iletişim formu (başarı / hata durumları)
+- SEO: her sayfada unique `title` / `description`, Open Graph, JSON-LD (`RentalService`)
+- `next/image` ile optimize edilmiş görseller
+
+## 📁 Proje Yapısı
+
+```
+is-makinesi-kiralama/
+├── pages/               # Sayfalar (Pages Router)
+│   ├── index.js         # Ana sayfa
+│   ├── makineler.js     # Makine kategorileri
+│   ├── makineler/       # Kategori detayları (beko-loder, ekskavator, mini-ekskavator)
+│   ├── hakkimizda.js
+│   └── iletisim.js      # İletişim + form
+├── components/          # Layout, Header, Hero, Footer, MachineCard, MachineGrid, ContactForm
+├── public/              # Statik dosyalar (görseller, robots.txt, sitemap.xml)
+├── styles/globals.css   # Tailwind CSS + tema
+├── docs/                # README görselleri
+├── next.config.mjs
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Kurulum
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev      # Geliştirme sunucusu (localhost:3000)
+npm run build    # Production build
+npm run start    # Production sunucu
+npm run lint     # ESLint ile kod kontrolü
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔑 İletişim Formu (Formspree)
 
-## Learn More
+Form gönderimleri Formspree üzerinden sağlanır. Form ID'si `components/ContactForm.js` içinde güncellenir. Bir makine seçilip iletişim sayfasına gelindiğinde seçilen makine bilgisi forma otomatik olarak taşınır.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deployment (Vercel)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Vercel'de yeni proje oluşturup bu repoyu bağlayın.
+- Deploy otomatik olarak gerçekleşir.
+- Production branch'e her push sonrası yeni build alınır.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✅ Yapılacaklar
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Gerçek domain bağlama (`robots.txt` / `sitemap.xml` güncellemesi)
+- Gerçek makine fotoğrafları
+- `og:image` eklenmesi (sosyal paylaşım önizlemeleri)
+- Ana sayfa ekran görüntüsünün güncellenmesi

@@ -1,0 +1,37 @@
+
+> is-makinesi-kiralama@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.24.224.1:3000
+✓ Ready in 4.3s
+
+ GET / 200 in 527ms (next.js: 415ms, application-code: 113ms)
+ GET / 200 in 522ms (next.js: 477ms, application-code: 45ms)
+✓ Compiled in 828ms
+✓ Compiled in 563ms
+✓ Compiled in 380ms
+✓ Compiled in 135ms
+✓ Compiled in 416ms
+✓ Compiled in 346ms
+✓ Compiled in 515ms
+✓ Compiled in 536ms
+✓ Compiled in 112ms
+✓ Compiled in 92ms
+✓ Compiled in 85ms
+✓ Compiled in 119ms
+✓ Compiled in 69ms
+✓ Compiled in 91ms
+✓ Compiled in 330ms
+✓ Compiled in 205ms
+✓ Compiled in 88ms
+✓ Compiled in 100ms
+✓ Compiled in 97ms
+✓ Compiled in 92ms
+✓ Compiled in 71ms
+✓ Compiled in 94ms
+✓ Compiled in 87ms
+✓ Compiled in 605ms
+✓ Compiled in 98ms
+ GET / 200 in 155ms (next.js: 106ms, application-code: 49ms)

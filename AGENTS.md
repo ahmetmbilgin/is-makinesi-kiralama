@@ -27,5 +27,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **Form**: Formspree kullan. Form action: `https://formspree.io/f/xxxxxx` — `method="POST"` zorunlu. Formspree ID'sini `components/ContactForm.js` içinde güncelle.
 - **Routing**: Pages Router — `pages/` altındaki dosyalar otomatik route olur.
 - **Stil**: Tailwind CSS v4 — `@import "tailwindcss"` kullan, `@theme` ile özelleştir. `tailwind.config.js` yok.
-- **İletişim**: Telefon numarası sitede sabit gösterilecek (`+90 555 555 55 55`). Müşteri form doldurur veya arar.
+- **İletişim**: Telefon numarası sitede sabit gösterilecek (`+90 535 355 31 87`). Müşteri form doldurur veya arar.
 - **Güncellenmesi gerekenler**: Formspree ID'si, telefon numarası, email adresi, gerçek fotoğraflar.

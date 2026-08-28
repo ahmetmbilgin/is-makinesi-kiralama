@@ -4,16 +4,22 @@ import Image from "next/image"
 
 const categories = [
   {
-    title: "Kepçe",
-    description: "Kazı, hafriyat ve yükleme işleri için her boyutta kepçe.",
-    image: "/images/kepce-makine.jpg",
-    slug: "/makineler/kepce",
+    title: "Beko Loder (Kazıcı Yükleyici)",
+    description: "Kazı ve yükleme işleri için tek makinede iki çözüm.",
+    image: "/images/beko-kategori.jpg",
+    slug: "/makineler/beko-loder",
   },
   {
-    title: "Kamyon",
-    description: "Damperli kamyonlarla hafriyat ve malzeme taşımacılığı.",
-    image: "/images/kamyon-makine.jpg",
-    slug: "/makineler/kamyon",
+    title: "Ekskavatör (Paletli ve Lastikli)",
+    description: "Her arazi koşulu için paletli ve lastikli ekskavatörler.",
+    image: "/images/kepce-makine.jpg",
+    slug: "/makineler/ekskavator",
+  },
+  {
+    title: "Mini Ekskavatör (Küçük Tonaj)",
+    description: "Dar alan çalışmaları için kompakt ve manevra kabiliyeti yüksek makineler.",
+    image: "/images/mini-kategori.jpg",
+    slug: "/makineler/mini-ekskavator",
   },
 ]
 
@@ -24,7 +30,12 @@ export default function Makineler() {
         <title>Tüm Makineler | İş Makinesi Kiralama</title>
         <meta
           name="description"
-          content="Kiralık kepçe, kamyon ve diğer iş makineleri. Uygun fiyat, güvenilir hizmet."
+          content="Kiralık beko loder, ekskavatör ve mini ekskavatör. Uygun fiyat, güvenilir hizmet."
+        />
+        <meta property="og:title" content="Tüm Makineler | İş Makinesi Kiralama" />
+        <meta
+          property="og:description"
+          content="Beko loder, ekskavatör ve mini ekskavatör kiralama seçenekleri. Uygun fiyat, güvenilir hizmet."
         />
       </Head>
 
@@ -37,7 +48,7 @@ export default function Makineler() {
             İhtiyacınıza uygun iş makinesini kategoriler arasından seçin.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {categories.map((cat, index) => (
             <Link
               key={index}

@@ -1,4 +1,5 @@
 import Head from "next/head"
+import { useRouter } from "next/router"
 import ContactForm from "@/components/ContactForm"
 
 const contactInfo = [
@@ -9,8 +10,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Telefon",
-    value: "+90 555 555 55 55",
-    href: "tel:+905555555555"
+    value: "+90 535 355 31 87",
+    href: "tel:+905353553187"
   },
   {
     icon: (
@@ -25,12 +26,20 @@ const contactInfo = [
 ]
 
 export default function Iletisim() {
+  const router = useRouter()
+  const machine = router.query.makine
+
   return (
     <>
       <Head>
         <title>İletişim | İş Makinesi Kiralama</title>
         <meta
           name="description"
+          content="İş makinesi kiralama için bize ulaşın. Telefon veya iletişim formu ile hemen teklif alın."
+        />
+        <meta property="og:title" content="İletişim | İş Makinesi Kiralama" />
+        <meta
+          property="og:description"
           content="İş makinesi kiralama için bize ulaşın. Telefon veya iletişim formu ile hemen teklif alın."
         />
       </Head>
@@ -48,23 +57,36 @@ export default function Iletisim() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 max-w-5xl mx-auto">
           <div>
             <div className="space-y-6">
-              {contactInfo.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 p-5 bg-card border border-border rounded-xl transition-colors hover:border-accent/30">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center flex-shrink-0">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
-                    {item.href ? (
-                      <a href={item.href} className="font-semibold text-card-foreground hover:text-accent transition-colors">
-                        {item.value}
-                      </a>
-                    ) : (
+              {contactInfo.map((item, index) => {
+                const content = (
+                  <>
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center flex-shrink-0">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
                       <p className="font-semibold text-card-foreground">{item.value}</p>
-                    )}
+                    </div>
+                  </>
+                )
+
+                const baseClass =
+                  "flex items-start gap-4 p-5 bg-card border border-border rounded-xl transition-all duration-200"
+
+                return item.href ? (
+                  <a
+                    key={index}
+                    href={item.href}
+                    className={`${baseClass} hover:border-accent/40 hover:shadow-sm hover:shadow-accent/10 hover:bg-accent/[0.02]`}
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div key={index} className={baseClass}>
+                    {content}
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
 
@@ -74,7 +96,7 @@ export default function Iletisim() {
               <p className="text-sm text-muted-foreground mb-6 select-none">
                 Formu doldurun, en kısa sürede size dönüş yapalım.
               </p>
-              <ContactForm />
+              <ContactForm machine={machine} />
             </div>
           </div>
         </div>

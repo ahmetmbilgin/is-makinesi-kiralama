@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function ContactForm() {
+export default function ContactForm({ machine }) {
   const [status, setStatus] = useState("idle")
 
   async function handleSubmit(e) {
@@ -11,7 +11,7 @@ export default function ContactForm() {
       const form = e.target
       const data = new FormData(form)
 
-      const res = await fetch("https://formspree.io/f/xxxxxx", {
+      const res = await fetch("https://formspree.io/f/mbgjjdja", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -50,6 +50,19 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5 select-none">
+      {machine && (
+        <div className="flex items-center gap-2 px-4 py-3 bg-accent/5 border border-accent/25 rounded-xl">
+          <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
+          </svg>
+          <p className="text-sm">
+            <span className="text-muted-foreground">Seçili Makine: </span>
+            <span className="font-semibold text-card-foreground">{machine}</span>
+          </p>
+        </div>
+      )}
+      <input type="hidden" name="machine" value={machine || ""} />
       {status === "error" && (
         <div className="px-4 py-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700">
           Bir hata oluştu. Lütfen tekrar deneyin veya bizi doğrudan arayın.
@@ -81,8 +94,8 @@ export default function ContactForm() {
           name="phone"
           required
           defaultValue=""
-          pattern="[0-9]{10}"
-          maxLength={10}
+          pattern="(0?[0-9]{10})"
+          maxLength={11}
           inputMode="numeric"
           title="Geçerli bir telefon numarası girin"
           autoComplete="tel"
@@ -100,7 +113,7 @@ export default function ContactForm() {
           rows={4}
           required
           className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm placeholder:text-muted-foreground resize-none select-text"
-          placeholder="İhtiyacınız olan makine ve çalışma detaylarını yazın..."
+          placeholder="Çalışma detaylarınızı yazın..."
         />
       </div>
       <button
