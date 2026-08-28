@@ -3,14 +3,14 @@ import MachineGrid from "@/components/MachineGrid"
 
 const ekskavatorMachines = [
   {
-    title: "Paletli Ekskavatör 20 Ton",
-    description: "Zorlu arazi koşullarında üstün çekiş gücü. 20 ton çalışma ağırlığı.",
-    image: "/images/ekskavator-20.jpg",
-  },
-  {
     title: "Lastikli Ekskavatör 15 Ton",
     description: "Şehir içi ve asfalt çalışmalar için hızlı yer değiştirme imkanı.",
     image: "/images/ekskavator-15-lastikli.jpg",
+  },
+  {
+    title: "Paletli Ekskavatör 20 Ton",
+    description: "Zorlu arazi koşullarında üstün çekiş gücü. 20 ton çalışma ağırlığı.",
+    image: "/images/ekskavator-20.jpg",
   },
   {
     title: "Paletli Ekskavatör 30 Ton",

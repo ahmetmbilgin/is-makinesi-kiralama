@@ -35,3 +35,10 @@
 ✓ Compiled in 605ms
 ✓ Compiled in 98ms
  GET / 200 in 155ms (next.js: 106ms, application-code: 49ms)
+ GET / 304 in 41ms (next.js: 11ms, application-code: 30ms)
+✓ Compiled in 163ms
+✓ Compiled in 128ms
+✓ Compiled in 88ms
+✓ Compiled in 93ms
+✓ Compiled in 89ms
+✓ Compiled in 99ms

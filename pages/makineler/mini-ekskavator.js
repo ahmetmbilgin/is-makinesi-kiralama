@@ -3,9 +3,9 @@ import MachineGrid from "@/components/MachineGrid"
 
 const miniEkskavatorMachines = [
   {
-    title: "Mini Ekskavatör 3 Ton",
-    description: "Dar alan ve bahçe çalışmaları için ideal boyut. Kolay taşınabilir.",
-    image: "/images/mini-3t.jpg",
+    title: "Mini Ekskavatör 1.5 Ton",
+    description: "En dar alanlarda çalışma için kompakt mini ekskavatör.",
+    image: "/images/mini-15t.jpg",
   },
   {
     title: "Mini Ekskavatör 2 Ton",
@@ -13,9 +13,9 @@ const miniEkskavatorMachines = [
     image: "/images/mini-2t.jpg",
   },
   {
-    title: "Mini Ekskavatör 1.5 Ton",
-    description: "En dar alanlarda çalışma için kompakt mini ekskavatör.",
-    image: "/images/mini-15t.jpg",
+    title: "Mini Ekskavatör 3 Ton",
+    description: "Dar alan ve bahçe çalışmaları için ideal boyut. Kolay taşınabilir.",
+    image: "/images/mini-3t.jpg",
   },
 ]
 
