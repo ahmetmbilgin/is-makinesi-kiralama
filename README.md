@@ -92,16 +92,4 @@ Bir makine seçilip iletişim sayfasına gelindiğinde seçilen makine bilgisi f
 
 ## 🌐 Deployment (Vercel)
 
-- Vercel'de proje oluşturup GitHub reposunu bağlayın
-- Production branch'e her push'ta otomatik yeni build alınır
-- Custom alan: `sahamakinem.com` (SSL otomatik, Vercel panelinden bağlanır)
-- Vercel dashboard `Analytics` sekmesinden ziyaretçi istatistikleri açılabilir
-
-## ⚠️ Canlıya Alırken Güncellenmesi Gerekenler
-
-- [x] Formspree ID — `components/ContactForm.js`
-- [x] Telefon +90 535 355 31 87 — `lib/site.js` ve bileşenler
-- [x] `robots.txt` / `sitemap.xml` — `sahamakinem.com`
-- [x] `og:image` — `public/images/hero.jpg`
-- [ ] Gerçek makine fotoğrafları (`public/images/`)
-- [ ] Google Search Console doğrulaması + `sitemap.xml` gönderimi
+Saha Makinem **Vercel** üzerinde barındırılır. GitHub reposuna atılan her push, production ortamda otomatik olarak yeni bir build tetikler. Custom domain `sahamakinem.com` siteye bağlıdır ve SSL sertifikası Vercel tarafından otomatik yönetilir. Ziyaretçi istatistikleri Vercel dashboard'da bulunan **Analytics** sekmesinden izlenir.
