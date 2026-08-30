@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 import ContactForm from "@/components/ContactForm"
+import { SITE_URL, SITE_IMAGE, SITE_TEL } from "@/lib/site"
 
 const contactInfo = [
   {
@@ -43,15 +44,35 @@ export default function Iletisim() {
   return (
     <>
       <Head>
-        <title>İletişim | İş Makinesi Kiralama</title>
+        <title>İletişim | Saha Makinem</title>
         <meta
           name="description"
-          content="İş makinesi kiralama için bize ulaşın. Telefon veya iletişim formu ile hemen teklif alın."
+          content="İş makinesi kiralama için bize ulaşın. Formu doldurun veya bizi arayın, hemen teklif alın. İstanbul Anadolu Yakası'nda hizmet veriyoruz."
         />
-        <meta property="og:title" content="İletişim | İş Makinesi Kiralama" />
+        <link rel="canonical" href={`${SITE_URL}/iletisim`} />
+        <meta property="og:url" content={`${SITE_URL}/iletisim`} />
+        <meta property="og:image" content={SITE_IMAGE} />
+        <meta property="og:title" content="İletişim | Saha Makinem" />
         <meta
           property="og:description"
           content="İş makinesi kiralama için bize ulaşın. Telefon veya iletişim formu ile hemen teklif alın."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@type": "ContactPage",
+              url: `${SITE_URL}/iletisim`,
+              name: "İletişim | Saha Makinem",
+              mainEntity: {
+                "@type": "ContactPoint",
+                telephone: SITE_TEL,
+                contactType: "customer service",
+                areaServed: "TR",
+                availableLanguage: "Turkish",
+              },
+            }),
+          }}
         />
       </Head>
 

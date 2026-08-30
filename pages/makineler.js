@@ -1,24 +1,25 @@
 import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
+import { SITE_URL, SITE_IMAGE } from "@/lib/site"
 
 const categories = [
   {
-    title: "Beko Loder (Kazıcı Yükleyici)",
+    title: "Beko Loder",
     description: "Kazı ve yükleme işleri için tek makinede iki çözüm.",
-    image: "/images/beko-kategori.jpg",
+    image: "/images/beko-loder.jpg",
     slug: "/makineler/beko-loder",
   },
   {
-    title: "Ekskavatör (Paletli ve Lastikli)",
+    title: "Ekskavatör",
     description: "Her arazi koşulu için paletli ve lastikli ekskavatörler.",
-    image: "/images/kepce-makine.jpg",
+    image: "/images/ekskavator.jpg",
     slug: "/makineler/ekskavator",
   },
   {
-    title: "Mini Ekskavatör (Küçük Tonaj)",
+    title: "Mini Ekskavatör",
     description: "Dar alan çalışmaları için kompakt ve manevra kabiliyeti yüksek makineler.",
-    image: "/images/mini-kategori.jpg",
+    image: "/images/mini-ekskavator.jpg",
     slug: "/makineler/mini-ekskavator",
   },
 ]
@@ -27,15 +28,46 @@ export default function Makineler() {
   return (
     <>
       <Head>
-        <title>İş Makineleri | İş Makinesi Kiralama</title>
+        <title>İş Makineleri | Saha Makinem</title>
         <meta
           name="description"
-          content="Kiralık beko loder, ekskavatör ve mini ekskavatör. Uygun fiyat, güvenilir hizmet."
+          content="Kiralık beko loder, ekskavatör ve mini ekskavatör. İstanbul Anadolu Yakası'nda uygun fiyatla güvenilir iş makinesi kiralamanın en kolay yolu."
         />
-        <meta property="og:title" content="İş Makineleri | İş Makinesi Kiralama" />
+        <link rel="canonical" href={`${SITE_URL}/makineler`} />
+        <meta property="og:url" content={`${SITE_URL}/makineler`} />
+        <meta property="og:image" content={SITE_IMAGE} />
+        <meta property="og:title" content="İş Makineleri | Saha Makinem" />
         <meta
           property="og:description"
           content="Beko loder, ekskavatör ve mini ekskavatör kiralama seçenekleri. Uygun fiyat, güvenilir hizmet."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@type": "ItemList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Beko Loder Kiralama",
+                  url: `${SITE_URL}/makineler/beko-loder`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Ekskavatör Kiralama",
+                  url: `${SITE_URL}/makineler/ekskavator`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Mini Ekskavatör Kiralama",
+                  url: `${SITE_URL}/makineler/mini-ekskavator`,
+                },
+              ],
+            }),
+          }}
         />
       </Head>
 

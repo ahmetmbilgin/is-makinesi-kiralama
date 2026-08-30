@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Hero from "@/components/Hero"
 import Link from "next/link"
+import { SITE_URL, SITE_NAME, SITE_IMAGE, SITE_TEL, AREA_SERVED } from "@/lib/site"
 
 const features = [
   {
@@ -46,31 +47,60 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>İş Makinesi Kiralama | Kepçe Kiralama - Profesyonel Çözümler</title>
+        <title>Saha Makinem | Kepçe Kiralama - Profesyonel Çözümler</title>
         <meta
           name="description"
-          content="İş makinesi kiralama hizmeti. Kepçe gibi iş makinelerini uygun fiyatlarla kiralayın. Hemen teklif alın."
+          content="İstanbul Anadolu Yakası'nda beko loder, ekskavatör ve mini ekskavatör kiralama. İhtiyacınıza uygun iş makinesini kolayca bulun, hemen teklif alın."
         />
-        <meta property="og:title" content="İş Makinesi Kiralama | Kepçe Kiralama - Profesyonel Çözümler" />
+        <link rel="canonical" href={SITE_URL} />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:image" content={SITE_IMAGE} />
+        <meta property="og:title" content="Saha Makinem | Kepçe Kiralama - Profesyonel Çözümler" />
         <meta
           property="og:description"
-          content="İş makinesi kiralama hizmeti. Beko loder, ekskavatör ve mini ekskavatörü uygun fiyatlarla kiralayın. Hemen teklif alın."
+          content="İstanbul Anadolu Yakası'nda beko loder, ekskavatör ve mini ekskavatör kiralama. İhtiyacınıza uygun iş makinesini kolayca bulun, hemen teklif alın."
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "RentalService",
-              name: "İş Makinesi Kiralama",
-              telephone: "+90 535 355 31 87",
-              areaServed: "TR",
-              availableLanguage: "Turkish",
+              "@type": "LocalBusiness",
+              "@id": `${SITE_URL}/#localbusiness`,
+              name: SITE_NAME,
+              url: SITE_URL,
+              image: SITE_IMAGE,
+              telephone: SITE_TEL,
+              priceRange: "₺₺",
               description:
-                "Beko loder, ekskavatör ve mini ekskavatör kiralama hizmeti. Uygun fiyat, güvenilir ve profesyonel çözümler.",
-              brand: {
-                "@type": "Brand",
-                name: "İş Makinesi Kiralama",
+                "Beko loder, ekskavatör ve mini ekskavatör iş makinesi kiralama hizmeti. Uygun fiyat, güvenilir ve profesyonel çözümler.",
+              address: {
+                "@type": "PostalAddress",
+                addressRegion: "İstanbul",
+                addressLocality: "İstanbul",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 41.0237,
+                longitude: 29.0194,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  opens: "08:00",
+                  closes: "18:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Saturday",
+                  opens: "09:00",
+                  closes: "15:00",
+                },
+              ],
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: AREA_SERVED.name,
+                description: AREA_SERVED.description,
               },
               makesOffer: [
                 {
@@ -86,6 +116,7 @@ export default function Home() {
                   itemOffered: { "@type": "Service", name: "Mini Ekskavatör Kiralama" },
                 },
               ],
+              availableLanguage: "Turkish",
             }),
           }}
         />

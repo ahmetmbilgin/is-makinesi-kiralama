@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Link from "next/link"
+import { SITE_URL, SITE_IMAGE } from "@/lib/site"
 
 const values = [
   {
@@ -44,15 +45,28 @@ export default function Hakkimizda() {
   return (
     <>
       <Head>
-        <title>Hakkımızda | İş Makinesi Kiralama</title>
+        <title>Hakkımızda | Saha Makinem</title>
         <meta
           name="description"
-          content="İstanbul Anadolu Yakası'nda beko loder, ekskavatör ve mini ekskavatör kiralama. Güvenilir, uygun fiyatlı ve profesyonel hizmet."
+          content="İstanbul Anadolu Yakası'nda beko loder, ekskavatör ve mini ekskavatör kiralama. Güvenilir, uygun fiyatlı ve profesyonel iş makinesi hizmeti."
         />
-        <meta property="og:title" content="Hakkımızda | İş Makinesi Kiralama" />
+        <link rel="canonical" href={`${SITE_URL}/hakkimizda`} />
+        <meta property="og:url" content={`${SITE_URL}/hakkimizda`} />
+        <meta property="og:image" content={SITE_IMAGE} />
+        <meta property="og:title" content="Hakkımızda | Saha Makinem" />
         <meta
           property="og:description"
           content="İstanbul Anadolu Yakası'nda beko loder, ekskavatör ve mini ekskavatör kiralama. Güvenilir, uygun fiyatlı ve profesyonel hizmet."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@type": "AboutPage",
+              url: `${SITE_URL}/hakkimizda`,
+              name: "Hakkımızda | Saha Makinem",
+            }),
+          }}
         />
       </Head>
 
@@ -62,7 +76,7 @@ export default function Hakkimizda() {
             Hakkımızda
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            İş Makinesi Kiralama olarak, inşaat ve hafriyat sektöründe kaliteli iş makinelerini
+            Saha Makinem olarak, inşaat ve hafriyat sektöründe kaliteli iş makinelerini
             uygun fiyatlarla müşterilerimizin hizmetine sunuyoruz.
           </p>
         </div>
