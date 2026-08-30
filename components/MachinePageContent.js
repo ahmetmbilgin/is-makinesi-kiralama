@@ -71,7 +71,7 @@ export default function MachinePageContent({ machine }) {
       </section>
 
       <section className="mt-28 lg:mt-40">
-        <SectionTitle>En Sık Kullanılan Senaryolar</SectionTitle>
+        <SectionTitle>En Sık Kullanım Alanları</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
           {machine.useCases.map((use, index) => (
             <div
